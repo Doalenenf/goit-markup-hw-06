@@ -19,6 +19,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
@@ -32,10 +33,14 @@
 
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="#" class="nav-link current">Studio</a>
+              <a href="./index.html" class="nav-link current">Studio</a>
             </li>
-            <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contacts</a></li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contacts" class="nav-link">Contacts</a>
+            </li>
           </ul>
         </nav>
 
@@ -53,6 +58,12 @@
             </li>
           </ul>
         </address>
+
+        <button type="button" class="mob-menu-open-btn" aria-label="Open menu">
+          <svg class="mob-menu-open-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -135,6 +146,10 @@
             <li class="team-item">
               <img
                 src="./images/mark-guerrero.jpg"
+                srcset="
+                  ./images/mark-guerrero.jpg    1x,
+                  ./images/mark-guerrero@2x.jpg 2x
+                "
                 alt="Mark Guerrero"
                 width="264"
                 height="260"
@@ -179,6 +194,7 @@
             <li class="team-item">
               <img
                 src="./images/tom-ford.jpg"
+                srcset="./images/tom-ford.jpg 1x, ./images/tom-ford@2x.jpg 2x"
                 alt="Tom Ford"
                 width="264"
                 height="260"
@@ -223,6 +239,10 @@
             <li class="team-item">
               <img
                 src="./images/camila-garcia.jpg"
+                srcset="
+                  ./images/camila-garcia.jpg    1x,
+                  ./images/camila-garcia@2x.jpg 2x
+                "
                 alt="Camila Garcia"
                 width="264"
                 height="260"
@@ -267,6 +287,10 @@
             <li class="team-item">
               <img
                 src="./images/daniel-wilson.jpg"
+                srcset="
+                  ./images/daniel-wilson.jpg    1x,
+                  ./images/daniel-wilson@2x.jpg 2x
+                "
                 alt="Daniel Wilson"
                 width="264"
                 height="260"
@@ -312,7 +336,7 @@
       </section>
 
       <!-- Portfolio -->
-      <section class="portfolio section">
+      <section class="portfolio section" id="portfolio">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
 
@@ -322,6 +346,10 @@
                 <div class="portfolio-thumb">
                   <img
                     src="./images/banking-app.jpg"
+                    srcset="
+                      ./images/banking-app.jpg    1x,
+                      ./images/banking-app@2x.jpg 2x
+                    "
                     alt="Banking App"
                     width="360"
                     height="300"
@@ -345,6 +373,10 @@
                 <div class="portfolio-thumb">
                   <img
                     src="./images/cashless-payment.jpg"
+                    srcset="
+                      ./images/cashless-payment.jpg    1x,
+                      ./images/cashless-payment@2x.jpg 2x
+                    "
                     alt="Cashless Payment"
                     width="360"
                     height="300"
@@ -368,6 +400,10 @@
                 <div class="portfolio-thumb">
                   <img
                     src="./images/meditation-app.jpg"
+                    srcset="
+                      ./images/meditation-app.jpg    1x,
+                      ./images/meditation-app@2x.jpg 2x
+                    "
                     alt="Meditation App"
                     width="360"
                     height="300"
@@ -391,6 +427,10 @@
                 <div class="portfolio-thumb">
                   <img
                     src="./images/taxi-service.jpg"
+                    srcset="
+                      ./images/taxi-service.jpg    1x,
+                      ./images/taxi-service@2x.jpg 2x
+                    "
                     alt="Taxi Service"
                     width="360"
                     height="300"
@@ -414,6 +454,10 @@
                 <div class="portfolio-thumb">
                   <img
                     src="./images/screen-ilustration.jpg"
+                    srcset="
+                      ./images/screen-ilustration.jpg    1x,
+                      ./images/screen-ilustration@2x.jpg 2x
+                    "
                     alt="Screen Illustrations"
                     width="360"
                     height="300"
@@ -437,6 +481,10 @@
                 <div class="portfolio-thumb">
                   <img
                     src="./images/online-courses.jpg"
+                    srcset="
+                      ./images/online-courses.jpg    1x,
+                      ./images/online-courses@2x.jpg 2x
+                    "
                     alt="Online Courses"
                     width="360"
                     height="300"
@@ -460,7 +508,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="page-footer">
+    <footer class="page-footer" id="contacts">
       <div class="container footer-container">
         <div class="footer-brand">
           <a href="./index.html" class="footer-logo"
@@ -510,6 +558,7 @@
             </li>
           </ul>
         </div>
+
         <div class="footer-subscribe">
           <p class="footer-subscribe-title">Subscribe</p>
 
@@ -533,7 +582,87 @@
         </div>
       </div>
     </footer>
-    <!-- modal -->
+
+    <!-- Mobile menu -->
+    <div class="mob-menu">
+      <div class="mob-menu-container">
+        <button
+          type="button"
+          class="mob-menu-close-btn"
+          aria-label="Close menu"
+        >
+          <svg class="mob-menu-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <nav class="mob-nav">
+          <ul class="mob-nav-list">
+            <li class="mob-nav-item">
+              <a href="./index.html" class="mob-nav-link current">Studio</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#portfolio" class="mob-nav-link">Portfolio</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#contacts" class="mob-nav-link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="mob-menu-bottom">
+          <address class="mob-address">
+            <ul class="mob-address-list">
+              <li class="mob-address-item">
+                <a
+                  href="tel:+110001111111"
+                  class="mob-address-link mob-address-link-accent"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="mob-address-item">
+                <a href="mailto:info@devstudio.com" class="mob-address-link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+
+          <ul class="mob-social-list">
+            <li class="mob-social-item">
+              <a href="#" class="mob-social-link" aria-label="Instagram">
+                <svg class="mob-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-social-item">
+              <a href="#" class="mob-social-link" aria-label="Twitter">
+                <svg class="mob-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-social-item">
+              <a href="#" class="mob-social-link" aria-label="Facebook">
+                <svg class="mob-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-social-item">
+              <a href="#" class="mob-social-link" aria-label="LinkedIn">
+                <svg class="mob-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
     <div class="backdrop">
       <div class="modal">
         <p class="modal-title">Leave your contacts and we will call you back</p>
@@ -542,8 +671,8 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+
         <form class="modal-form">
-          <!-- Name -->
           <div class="modal-field">
             <label class="modal-label" for="name">Name</label>
             <div class="modal-input-wrap">
@@ -559,7 +688,6 @@
             </div>
           </div>
 
-          <!-- Phone -->
           <div class="modal-field">
             <label class="modal-label" for="user-phone">Phone</label>
             <div class="modal-input-wrap">
@@ -575,7 +703,6 @@
             </div>
           </div>
 
-          <!-- Email -->
           <div class="modal-field">
             <label class="modal-label" for="user-email">Email</label>
             <div class="modal-input-wrap">
@@ -591,7 +718,6 @@
             </div>
           </div>
 
-          <!-- Comment -->
           <div class="modal-field modal-field-textarea">
             <label class="modal-label" for="user-comment">Comment</label>
             <textarea
@@ -602,7 +728,6 @@
             ></textarea>
           </div>
 
-          <!-- Checkbox -->
           <div class="modal-checkbox-wrap">
             <input
               class="modal-checkbox visually-hidden"
